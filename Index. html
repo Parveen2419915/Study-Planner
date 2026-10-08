@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 Study Planner</h1>
+        <p>Plan your studies. Track your progress. Achieve your goals.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Progress Section -->
+        <section class="progress-card">
+            <div>
+                <h2>Today's Progress</h2>
+                <p id="progressText">0% Completed</p>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </section>
+
+        <!-- Add Task -->
+        <section class="card">
+            <h2>Add Study Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject (e.g. Java)"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="task"
+                    placeholder="Task (e.g. Study Arrays)"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+                <input
+                    type="time"
+                    id="time"
+                    required
+                >
+
+                <select id="priority">
+                    <option value="High">High Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="Low">Low Priority</option>
+                </select>
+
+                <button type="submit">+ Add Task</button>
+
+            </form>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </section>
+
+        <!-- Tasks -->
+        <section class="card">
+            <h2>My Study Tasks</h2>
+
+            <div id="taskList">
+                <!-- Tasks will appear here -->
+            </div>
+
+            <p id="emptyMessage">
+                No study tasks added yet.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Study Planner | Stay Consistent 🚀</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
